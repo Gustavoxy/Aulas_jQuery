@@ -1,0 +1,33 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: grey;
+}
+.site {
+	max-width: 1280px;
+}
+.top {
+	background-color: black;
+	height: 300px;
+}
+.subtop {
+	height: 80px;
+	background-color: yellow; 
+}
+.irmao {
+	background-color: blue;
+}
+.filha {
+	background-color: green;
+}
+.content {
+	height: 500px;
+	background-color: brown
+}
+.footer {
+	height: 90px;
+	background-color: green;
+}
