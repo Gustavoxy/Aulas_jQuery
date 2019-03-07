@@ -21,6 +21,12 @@ $(function(){
 	$('.meuBotao').bind('mouseout', function(){
 		$(this).removeClass('meuBotaoHover');
 	});
+	$('.meuBotao1').bind('mouseover', function(){
+		$(this).addClass('meuBotaoHover');
+	});
+	$('.meuBotao1').bind('mouseout', function(){
+		$(this).removeClass('meuBotaoHover');
+	});
 	/*
 	$('.meuBotao').bind('click', function(){
 		$('.meuBotao2').toggle('fast');
@@ -139,4 +145,20 @@ $(function(){
 	});
 
 	/**********ANIMACOES/ANIMATE**********/
+
+	/**********SOMANDO PROPRIEDADES NA ANIMACAO**********/
+
+	$('.meuBotao1').bind('click', function(){
+		$('.meuBotao2, .meuBotao3').animate({
+			'margin-left': "+=100"  //O valor ATUAL + 50//
+		}, 1000);
+	});
+	$('.meuBotao1').bind('mouseout', function(){
+		$('.meuBotao2, .meuBotao3').animate({
+			'margin-left': "-=100"  //O valor ATUAL + 50//
+		}, 1000);
+	}); 
+	
+
+	/**********SOMANDO PROPRIEDADES NA ANIMACAO**********/
 });
