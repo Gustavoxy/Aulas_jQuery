@@ -2,8 +2,22 @@
 <html>
 <head>
 	<title>Aulas de Ajax</title>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<style type="text/css" media="screen">
+		.area {
+			width: 300px;
+			height: 300px;
+			background-color: #d8d8d8;
+		}
+		.areaRequisicao {
+			float: left;
+		}
+		fieldset {
+			margin-top: -7px;
+			margin-left: 320px;
+		}
+	</style>
 </head>
 <body>
 
@@ -17,6 +31,30 @@
 	<P>São requisições internas para um web server depois da página ter sido carregada.</P>
 	<p>Requisições AJAX atualizam uma página web sem precisar recarrega-la.</p>
 	<p>Envia dados a um Web server de forma interna. Por trás, pela retaguarda</p>
+
+	<p>RESULTADO DA REQUISIÇÃO AJAX:</p>
+	<div class="areaRequisicao">
+		<div class="area"></div><br>
+		<!-- Botão abaixo vai carregar um conteúdo de um outro arquivo na área da div "area" -->
+		<input type="submit" class="botao" value="Ação" />
+	</div>
+
+	<fieldset style="width: 280px;">
+		<legend>Login</legend>
+		<form method="POST" id="form">
+			<input type="text" name="usuario" placeholder="Usuário" /><br><br>
+			<input type="password" name="senha" placeholder="senha" /><br><br>
+			<label>Idade:</label><br>
+			<select name="Idade">
+				<option value="18">18 Anos</option>
+				<option value="25">25 Anos</option>
+				<option value="35">35 Anos</option>
+				<option value="45">45 Anos</option>		
+			</select>
+			<input type="submit" value="Acessar" />
+		</form>
+		<p>Aqui, faremos a requisição/login via Ajax.</p>
+	</fieldset>
 
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="ajax.js"></script>
