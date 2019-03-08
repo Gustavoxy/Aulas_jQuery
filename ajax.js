@@ -25,7 +25,7 @@ $(function(){
 	});
 	*/
 
-	
+	/*
 	//OUTRO método AUXILIAR de requisições AJAX: ".GET"
 	$('.botao').bind('click', function(){
 		 
@@ -38,7 +38,7 @@ $(function(){
 			$('.area').html(resultado);
 		});
 	});
-	
+	*/
 
 	/*
 	//OUTRO método AUXILIAR de requisições AJAX: ".POST"
@@ -58,6 +58,7 @@ $(function(){
 	//Método AUXILIAR de requisições AJAX: "SERIALIZE"
 	//SERIALIZE: Pega TODOS os dados preenchidos e não preenchidos e formata os dados de forma a facilitar o envio pelo AJAX
 	//Coletar os valores entrados pelo usuário em campos de formulário e transformá-los em formato de string.
+	/*
 	$('#form').bind('submit', function(dados){
 		//Primeiro previnir o ENVIO DIRETO/PADRAO do formulário, pois vamos enviar via AJAX
 		dados.preventDefault();
@@ -65,7 +66,28 @@ $(function(){
 		var txt = $(this).serialize();
 		console.log(txt);
 	});
+	*/
 
+	$('#form').bind('submit', function(dados){
+		//Primeiro previnir o ENVIO DIRETO/PADRAO do formulário, pois vamos enviar via AJAX
+		dados.preventDefault();
+
+		var txt = $(this).serialize();
+		console.log(txt);
+		//Requisicao Ajax Completa
+		$.ajax({
+			type:'GET',
+			url:'ajax.php',
+			data:txt,
+			success:function(result){
+				$('.area').html("O valor da soma é: " + result);
+			},
+			error:function(){
+				alert("Algo está errado...");
+			}
+		});
+	});
+	
 
 
 
