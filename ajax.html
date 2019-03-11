@@ -15,7 +15,10 @@
 		}
 		fieldset {
 			margin-top: -7px;
-			margin-left: 320px;
+			margin-left: 10px;
+		}
+		.areaLogin {
+			float: left;
 		}
 	</style>
 </head>
@@ -39,14 +42,24 @@
 		<input type="submit" class="botao" value="Ação" />
 	</div>
 
-	<fieldset style="width: 280px;">
-		<legend>Login</legend>
-		<form method="POST" id="form">
+	<fieldset class="areaLogin" style="width: 280px;">
+		<legend>SOMAR</legend>
+		<form method="GET" id="form">
 			<input type="text" name="x" id="x" placeholder="Nº1" /><br><br>
 			<input type="text" name="y" id="y" placeholder="Nº2" /><br><br>
 			<input type="submit" value="Somar" />
 		</form>
 		<p>Aqui, faremos a requisição/login via Ajax.</p>
+	</fieldset>
+
+	<fieldset style="width: 280px;">
+		<legend>Login</legend>
+		<form method="GET" id="form">
+			<input type="text" name="x" id="nome" placeholder="Nome" /><br><br>
+			<input type="text" name="y" id="senha" placeholder="Senha" /><br><br>
+			<input type="submit" value="Enviar" />
+		</form>
+		<p>Requisição AJAX com resultado JSON.</p>
 	</fieldset>
 
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>

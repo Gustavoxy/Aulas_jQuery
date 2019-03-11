@@ -16,6 +16,7 @@ arquivo.xml - arquivo html em formato xml.
 $(function(){
 
 	/*
+	1º LOAD 
 	//////MÉTODOS DE REQUISIÇÕES AJAX//////
 	//Método AUXILIAR do AJAX de requisições: "$('elemento').load"
 	$('.botao').bind('click', function(){
@@ -26,6 +27,7 @@ $(function(){
 	*/
 
 	/*
+	1º GET 
 	//OUTRO método AUXILIAR de requisições AJAX: ".GET"
 	$('.botao').bind('click', function(){
 		 
@@ -39,8 +41,9 @@ $(function(){
 		});
 	});
 	*/
-
+	
 	/*
+	1º POST
 	//OUTRO método AUXILIAR de requisições AJAX: ".POST"
 	$('.botao').bind('click', function(){
  
@@ -49,12 +52,12 @@ $(function(){
 			//Argumentos da função...
 		//});
 				
-		$.post("ajaxArqExterno.html", function(resultado){
+		$.post('ajaxArqExterno.html', function(resultado){
 			$('.area').html(resultado);
 		});
 	});
 	*/
-
+	
 	//Método AUXILIAR de requisições AJAX: "SERIALIZE"
 	//SERIALIZE: Pega TODOS os dados preenchidos e não preenchidos e formata os dados de forma a facilitar o envio pelo AJAX
 	//Coletar os valores entrados pelo usuário em campos de formulário e transformá-los em formato de string.
@@ -87,11 +90,16 @@ $(function(){
 			}
 		});
 	});
-	
-
-
-
-
 	//////MÉTODOS DE REQUISIÇÕES AJAX//////
+
+	//////*****Recebendo e manipulando JSON*****//////
+
+	//REQUISICOES AJAX COM RESULTADO JSON É O QUE MAIS VOU UTILIZAR//
+
+
+
+	//////*****Recebendo e manipulando JSON*****//////
+
+
 
 });
