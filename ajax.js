@@ -90,12 +90,31 @@ $(function(){
 			}
 		});
 	});
+
 	//////MÉTODOS DE REQUISIÇÕES AJAX//////
 
 	//////*****Recebendo e manipulando JSON*****//////
 
 	//REQUISICOES AJAX COM RESULTADO JSON É O QUE MAIS VOU UTILIZAR//
+	$('#form2').bind('submit', function(submit){
+		submit.preventDefault();
 
+		var dados2 = $(this).serialize();
+		console.log(dados2);
+		// NAO ESTÁ FUNCIONANDO
+		$.ajax({
+			type: 'POST',
+			url: 'ajax2.php',
+			data: dados2,
+			dataType: 'json',//Digo ao meu AJAX que a REPOSTA/RESULTADO será do tipo JSON
+			success: function(j){
+				console.log(j);
+			},
+			error: function(){
+				alert("Algo está errado.");
+			}
+		});
+	});
 
 
 	//////*****Recebendo e manipulando JSON*****//////
