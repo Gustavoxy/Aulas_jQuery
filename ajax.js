@@ -119,6 +119,9 @@ $(function(){
 
 	//////*****Recebendo e manipulando JSON*****//////
 
-
-
+	//***** USANDO PLUGING MASK ******//
+	
+	$('#cep').mask('00000-000');
+	
+	//***** USANDO PLUGING MASK ******//
 });

@@ -54,15 +54,20 @@
 
 	<fieldset style="width: 280px;">
 		<legend>Login</legend>
-		<form method="GET" id="form2">
+		<form method="POST" id="form2">
 			<input type="text" name="nome" id="nome" placeholder="Nome" /><br><br>
 			<input type="password" name="senha" id="senha" placeholder="Senha" /><br><br>
 			<input type="submit" value="Entrar" />
 		</form>
 		<p>Requisição AJAX com resultado JSON.</p>
 	</fieldset>
+	
+	CEP:
+	<input type="text" name="cep" id="cep" />
 
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+	<!-- PLUGIN jQuery Mask - Converte numeros nas inputs de acordo com as info requisitadas -->
+	<script type="text/javascript" src="jquery.mask.js"></script>
 	<script type="text/javascript" src="ajax.js"></script>
 </body>
 </html>
