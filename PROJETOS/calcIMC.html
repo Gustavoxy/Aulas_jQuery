@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Calculadora IMC</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" href="" />
+		<meta name="viewport" content="width=device-width, user-scalable=no" />
+		<style type="text/css" media="screen">
+			#campos {
+				float: left;
+			}
+			#display {
+				width: 200px;
+				height: 200px;
+				background-color: #cfcfd1;
+				display: inline-block;
+				margin-left: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Primeiro, saber qual é a fórmula do IMC -->
+		<fieldset style="width: 400px;">
+			<legend>Calcular</legend>
+			<div id="campos">
+				<label>Peso (Em quilos)</label><br>
+				<input type="number" name="peso" id="peso" /><br><br>
+				<label>Altura (Em metros)</label><br>
+				<input type="text" name="altura" id="altura" /><br><br>
+				<button>Calcular IMC</button>
+			</div>
+			<div id="display">
+				<div>RESULTADO:</div>
+				<div id="resultado"></div>
+			</div>
+		</fieldset>
+		
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="calcIMC.js"></script>
+	</body>
+</html>
